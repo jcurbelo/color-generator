@@ -7,7 +7,7 @@ def main():
     grid = COLUMNS * COLUMNS
     for idx in range(0, COLOR_COUNT, grid):
         print(
-            'montage -tile {0}x0 {1} bytes/{2}.png'.format(
+            'montage -geometry +0+0 -background none -tile {0}x0 {1} bytes/{2}.png'.format(
                 COLUMNS, ' '.join(
                     ['bits/{}.png'.format(j)
                      for j in range(idx, idx + grid)]
